@@ -7,8 +7,8 @@ import java.util.TreeMap;
 
 import edu.handong.analysis.datamodel.Course;
 import edu.handong.analysis.datamodel.Student;
-import edu.handong.analysise.utils.NotEnoughArgumentException;
-import edu.handong.analysise.utils.Utils;
+import edu.handong.analysis.utils.NotEnoughArgumentException;
+import edu.handong.analysis.utils.Utils;
 
 public class HGUCoursePatternAnalyzer {
 
@@ -55,7 +55,12 @@ public class HGUCoursePatternAnalyzer {
 	private HashMap<String,Student> loadStudentCourseRecords(ArrayList<String> lines) {
 		
 		// TODO: Implement this method
-		
+		String[] arrayLines = new String[lines.size()];
+	      for(int j=0; j<lines.size(); j++) {
+	         arrayLines[j] = lines.get(j);
+	         String line = new String(arrayLines[j]);
+	         Course courses = new Course(line);
+	      }
 		return null; // do not forget to return a proper variable.
 	}
 
